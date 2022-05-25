@@ -12,14 +12,22 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwagger(); //middleware
+    app.UseSwaggerUI(); //middleware
 }
 
-app.UseHttpsRedirection();
+app.UseHttpsRedirection();  //middleware
 
-app.UseAuthorization();
+app.UseAuthorization(); //middleware
 
-app.MapControllers();
+//app.UseWelcomePage(); //middleware
+
+app.UseTimeMiddleware();
+
+app.MapControllers(); //middleware
 
 app.Run();
+
+//all middlewares must be in order
+//https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-6.0
+
