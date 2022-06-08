@@ -1,4 +1,4 @@
-using efcore_project.Models;
+using dotnet6_webapi.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnet6_webapi;

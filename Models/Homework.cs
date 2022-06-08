@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace efcore_project.Models;
+namespace dotnet6_webapi.Models;
 
 public class Homework
 {

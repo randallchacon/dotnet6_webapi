@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using efcore_project.Models;
+using dotnet6_webapi.Models;
 
-namespace efcore_project;
+namespace dotnet6_webapi;
 
 public class HomeworksContext : DbContext
 {

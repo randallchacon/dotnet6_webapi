@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace efcore_project.Models;
+namespace dotnet6_webapi.Models;
 
 public class Category
 {

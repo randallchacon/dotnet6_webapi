@@ -7,15 +7,25 @@ namespace dotnet6_webapi.Controllers;
 public class HelloWorldController : ControllerBase
 {
     IHelloWorldService helloWorldService;
+    HomeworksContext dbcontext;
 
-    public HelloWorldController(IHelloWorldService helloWorld)
+    public HelloWorldController(IHelloWorldService helloWorld, HomeworksContext db)
     {
         helloWorldService = helloWorld;
+        dbcontext = db;
     }
 
     [HttpGet]
     public IActionResult Get()
     {
         return Ok(helloWorldService.GetHelloWorld());
+    }
+
+    [HttpGet]
+    [Route("createdb")]
+    public IActionResult CreateDataBase()
+    {
+        dbcontext.Database.EnsureCreated();
+        return Ok();
     }
 }

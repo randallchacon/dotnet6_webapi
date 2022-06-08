@@ -9,6 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();//it's a dependency
 
+builder.Services.AddSqlServer<HomeworksContext>(builder.Configuration.GetConnectionString("cnHomeworks"));
+
 /*Dependency injection with scoped, transient or singleton. Most recommended scoped for stateless*/
 //dependency injection of services
 //builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();

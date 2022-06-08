@@ -1,5 +1,5 @@
-using efcore_project;
-using efcore_project.Models;
+using dotnet6_webapi;
+using dotnet6_webapi.Models;
 
 public class CategoryService : ICategoryService
 {
