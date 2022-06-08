@@ -11,7 +11,9 @@ builder.Services.AddSwaggerGen();//it's a dependency
 
 /*Dependency injection with scoped, transient or singleton. Most recommended scoped for stateless*/
 //builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
-builder.Services.AddScoped<IHelloWorldService>(p=> new HelloWorldService()); //I can pass parameters 
+builder.Services.AddScoped<IHelloWorldService>(p=> new HelloWorldService()); //Use when you can pass parameters 
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IHomeworksService, HomeworksService>();//dependency injection of services
 
 var app = builder.Build();
 
