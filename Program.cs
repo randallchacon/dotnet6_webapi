@@ -10,10 +10,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();//it's a dependency
 
 /*Dependency injection with scoped, transient or singleton. Most recommended scoped for stateless*/
+//dependency injection of services
 //builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
 builder.Services.AddScoped<IHelloWorldService>(p=> new HelloWorldService()); //Use when you can pass parameters 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IHomeworksService, HomeworksService>();//dependency injection of services
+builder.Services.AddScoped<IHomeworksService, HomeworksService>();
 
 var app = builder.Build();
 
