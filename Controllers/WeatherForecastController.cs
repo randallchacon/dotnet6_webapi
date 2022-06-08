@@ -31,11 +31,12 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    [Route("Get/weatherforecast")]
-    [Route("Get/weatherforecast2")]
-    [Route("[action]")]
+    //[Route("Get/weatherforecast")]
+    //[Route("Get/weatherforecast2")]
+    //[Route("[action]")]
     public IEnumerable<WeatherForecast> Get()
     {
+        _logger.LogDebug("API return weatherforest list"); //should be print in console. it's very important to check what is happening, especially in cloud 
         return ListWeatherForecast;
     }
 
